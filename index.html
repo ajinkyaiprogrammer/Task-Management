@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo">
+          <!-- <i class="fa-solid fa-bars" id="header-icon"></i> -->
+          <label id="header-label"><b>TaskFlow</b></label>
+        </div>
+
+        <div class="header-buttons">
+          <button>Board View</button>
+          <button>Workspaces</button>
+          <button>Team</button>
+        </div>
+
+        <div class="profile-image">
+          <img id="image" src="./assets/Photo - IP1708.jpeg" alt="" />
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="side-bar">
+          <div class="icon-text">
+            <div><i class="fa-solid fa-table-cells"></i></div>
+            <div><p><b>Ajinkya Anwade</b><br />Pro Plan</p></div>
+          </div>
+
+          <div class="icon-text">
+            <div><i class="fa-solid fa-border-all"></i></div>
+            <div><p>WorkSpaces</p></div>
+          </div>
+
+          <div class="icon-text">
+            <div><i class="fa-solid fa-square-poll-vertical"></i></div>
+            <div><p>Board View</p></div>
+          </div>
+
+          <div class="icon-text">
+            <div><i class="fa-brands fa-gitter"></i></div>
+            <div><p>Team Members</p></div>
+          </div>
+
+          <div class="icon-text">
+            <div><i class="fa-solid fa-gear"></i></div>
+            <div><p>Settings</p></div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="content-header">
+            <div class="heading">
+              <h2>Main Project Board</h2>
+              <p>Marketing Campaign Q3-Strategy & Execution</p>
+            </div>
+
+            <div class="input-buttons">
+              <input id="search-task" type="text" placeholder="Search tasks..." />
+
+              <div class="buttons">
+                <button id="all-task" type="button">All</button>
+                <button id="high-task" type="button">High</button>
+                <button id="medium-task" type="button">Medium</button>
+                <button id="low-task" type="button">Low</button>
+              </div>
+
+              <button id="btn" type="button">+ New Task</button>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="to-do">
+              <h3>To Do</h3>
+              <hr>
+              <div id="to-do-list"></div>
+            </div>
+
+            <div class="in-progress">
+              <h3>In Progress</h3>
+              <hr>
+              <div id="in-progress-list"></div>
+            </div>
+
+            <div class="completed">
+              <h3>Completed</h3>
+              <hr>
+              <div id="completed-list"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="task-form" class="input-form">
+      <form>
+        <div class="form-div">
+          <span class="card-title">Enter Task Details</span>
+          <br />
+          <span class="card-desc"
+            >Specify the requirements, including key objectives, necessary resources, and any specific constraints or deadlines for this task.</span
+          >
+          <!-- // Specify the requirements, including key objectives, necessary resources, and any specific constraints or deadlines for this task. -->
+          <div class="form-input">
+            <span>Task Title</span>
+            <input type="text" name="task-title" id="task-title" required />
+          </div>
+
+          <div class="form-input">
+            <span>Task Description</span>
+            <textarea name="task-description" id="task-description"></textarea>
+          </div>
+
+          <div class="form-input">
+            <span>Priority</span>
+            <div id="p-option-div" class="p-option-div">
+              <div onclick="select_priority(0)" class="p-option">Low</div>
+              <div onclick="select_priority(1)" class="p-option">Medium</div>
+              <div onclick="select_priority(2)" class="p-option">High</div>
+            </div>
+          </div>
+
+          <div class="form-dropdown">
+            <div class="form-input">
+              <span>Date</span>
+              <input type="date" required id="inp-task-date" />
+            </div>
+          </div>
+
+          <div class="form-options">
+            <button type="button" id="close-button">Cancel</button>
+            <button type="button" id="add-button">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
